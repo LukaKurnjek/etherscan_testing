@@ -29,9 +29,10 @@ Running the code examples
 -------------------------
 
 Open up a terminal, cd into a folder that contains the desired test case
-and run the following command: "testcafe <browser> <testcase_name>.js".
+and run the following command: 
+testcafe <browser_name> <testcase_name>.js
 
 If you would like to test for example test test01 with firefox:
 testcafe firefox test01.js
 
-If the test completes succesfully you will get a green message displayed.
+If the test completes succesfully you will get a green message displayed that says "1 passed".
