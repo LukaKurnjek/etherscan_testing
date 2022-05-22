@@ -6,13 +6,13 @@ fixture`Starting test 06 part 2.`
 
 test('Test 06.2', async t => {
     await t
-		// Click on the button to accept cookies
-		.click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
-		
-		// Enter a username that contains an invalid character
-		.typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'test_')
-		
-		// Enter email address twice
+        // Click on the button to accept cookies
+        .click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
+        
+        // Enter a username that contains an invalid character
+        .typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'test_')
+        
+        // Enter email address twice
         .typeText('#ContentPlaceHolder1_txtEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         .typeText('#ContentPlaceHolder1_txtConfirmEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         

@@ -7,12 +7,12 @@ fixture`Starting test 04.`
 test('Test 04', async t => {
     await t
         // Click on the button to accept cookies
-		.click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
-		
-		// Enter username
-		.typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
-		
-		// Enter email address twice
+        .click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
+        
+        // Enter username
+        .typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
+        
+        // Enter email address twice
         .typeText('#ContentPlaceHolder1_txtEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         .typeText('#ContentPlaceHolder1_txtConfirmEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         
@@ -35,8 +35,8 @@ test('Test 04', async t => {
     
     // Check weather the title and the warning message are as expected
     await t
-		.expect(checkboxText).eql('I agree to the Terms and Conditions\nPlease accept our Terms and Conditions.')
-		// Another valid way to check weather the above condition is satisfied
-		//.expect(checkboxText).contains('Please accept our Terms and Conditions.')
+        .expect(checkboxText).eql('I agree to the Terms and Conditions\nPlease accept our Terms and Conditions.')
+        // Another valid way to check weather the above condition is satisfied
+        //.expect(checkboxText).contains('Please accept our Terms and Conditions.')
         .expect(headerText).eql('Register a New Account');
 });

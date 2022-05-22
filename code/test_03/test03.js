@@ -6,13 +6,13 @@ fixture`Starting test 03.`
 
 test('Test 03', async t => {
     await t
-		// Click on the button to accept cookies
-		.click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
-		
-		// Enter username
-		.typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
-		
-		// Enter email address twice
+        // Click on the button to accept cookies
+        .click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
+        
+        // Enter username
+        .typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
+        
+        // Enter email address twice
         .typeText('#ContentPlaceHolder1_txtEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         .typeText('#ContentPlaceHolder1_txtConfirmEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         
@@ -22,11 +22,11 @@ test('Test 03', async t => {
         // Click on the "Create An Account" button
         .click('#ContentPlaceHolder1_btnRegister.btn.btn-sm.btn-primary');
 
-	// Get the inner text of the warning message for the "Password" field
+    // Get the inner text of the warning message for the "Password" field
     const warningElement1 = await Selector('#ContentPlaceHolder1_txtPassword-error.invalid-feedback');
     let warningText1 = await warningElement1.innerText;
 
-	// Get the inner text of the warning message for the "Confirm Password" field
+    // Get the inner text of the warning message for the "Confirm Password" field
     const warningElement2 = await Selector('#ContentPlaceHolder1_txtPassword2-error.invalid-feedback');
     let warningText2 = await warningElement2.innerText;
     
@@ -36,7 +36,7 @@ test('Test 03', async t => {
     
     // Check weather the title and the warning message are as expected
     await t
-		.expect(warningText1).eql('Your password must be at least 5 characters long.')
-		.expect(warningText2).eql('Your password must be at least 5 characters long.')
-		.expect(headerText).eql('Register a New Account');
+        .expect(warningText1).eql('Your password must be at least 5 characters long.')
+        .expect(warningText2).eql('Your password must be at least 5 characters long.')
+        .expect(headerText).eql('Register a New Account');
 });

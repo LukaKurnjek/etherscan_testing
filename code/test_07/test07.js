@@ -7,12 +7,12 @@ fixture`Starting test 07.`
 test('Test 07', async t => {
     await t
         // Click on the button to accept cookies
-		.click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
-		
-		// Enter username
-		.typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
-		
-		// Enter email address
+        .click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
+        
+        // Enter username
+        .typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
+        
+        // Enter email address
         .typeText('#ContentPlaceHolder1_txtEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         
         // Enter email address that does not match the first email address

@@ -6,13 +6,13 @@ fixture`Starting test 05.`
 
 test('Test 05', async t => {
     await t
-		// Click on the button to accept cookies
-		.click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
-		
-		// Enter username
-		.typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
-		
-		// Enter email address twice
+        // Click on the button to accept cookies
+        .click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
+        
+        // Enter username
+        .typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'testuser')
+        
+        // Enter email address twice
         .typeText('#ContentPlaceHolder1_txtEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         .typeText('#ContentPlaceHolder1_txtConfirmEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         

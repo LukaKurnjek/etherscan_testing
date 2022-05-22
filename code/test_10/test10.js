@@ -6,12 +6,12 @@ fixture`Starting test 10.`
 
 test('Test 10', async t => {
     // Function that gets the full URL path from the current window
-    const getPageUrl = ClientFunction(() => window.location.href);	
-	
+    const getPageUrl = ClientFunction(() => window.location.href);    
+    
     await t
         // Click on the button to accept cookies
         .click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
-		
+        
         // Enter username
         .typeText('#ContentPlaceHolder1_txtUserName.form-control.form-control-sm', 'newtestuser')
     

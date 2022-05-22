@@ -5,10 +5,10 @@ fixture`Starting test 09.`
     .page`https://etherscan.io/register`;
 
 test('Test 09', async t => {
-	// Define link for the "Sign In" page
-	const linkElement = await Selector('a').withText('Click to Sign In');
-	
-	// Click on the link
+    // Define link for the "Sign In" page
+    const linkElement = await Selector('a').withText('Click to Sign In');
+    
+    // Click on the link
     await t
         .click(linkElement);
     

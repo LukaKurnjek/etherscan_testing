@@ -6,10 +6,10 @@ fixture`Starting test 01.`
 
 test('Test 01', async t => {
     await t
-		// Click on the button to accept cookies
-		.click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
-		
-		// Enter email address twice
+        // Click on the button to accept cookies
+        .click('#btnCookie.btn.btn-sm.btn-primary.text-nowrap.py-1')
+        
+        // Enter email address twice
         .typeText('#ContentPlaceHolder1_txtEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         .typeText('#ContentPlaceHolder1_txtConfirmEmail.form-control.form-control-sm', 'my_test_email_etherscan@gmail.com')
         
@@ -23,7 +23,7 @@ test('Test 01', async t => {
         // Click on the "Create An Account" button
         .click('#ContentPlaceHolder1_btnRegister.btn.btn-sm.btn-primary');
 
-	// Get the inner text of the warning message for the username field
+    // Get the inner text of the warning message for the username field
     const warningElement = await Selector('.js-form-message.form-group.u-has-error').find('div');
     let warningText = await warningElement.innerText;
     
@@ -33,6 +33,6 @@ test('Test 01', async t => {
     
     // Check weather the title and the warning message are as expected
     await t    
-		.expect(warningText).eql('Username is invalid.')
-		.expect(headerText).eql('Register a New Account');
+        .expect(warningText).eql('Username is invalid.')
+        .expect(headerText).eql('Register a New Account');
 });
