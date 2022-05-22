@@ -1,12 +1,13 @@
 
-These tests attemp to simulate a positive workflow. They try an attempt
-to click on the reCAPTCHA checkbox in two different ways which do not work.
+This test simulates a positive workflow. When this test is runned for the
+first time it should succseed.
 
-In the end of the test I check weather I'm still on the same page which if
-passes it means the positive workflow was not accomplished.
+When it is runned for the second time following conditions have to be met:
+- the username on line 16 has to be changed since the registration will not
+  be possible with a username that already exists
+- there needs to be a couple of hours between the previous testing and the
+  next or else google gets suspicious and gives you more tasks to solve
 
-After many time of research on google I asked a question on stackoverflow:
-https://stackoverflow.com/questions/72277761/testcafe-click-on-checkbox-inside-a-virtual-element-document
-
-It seems that if the source of the iframe bellongs to a different domain the
-elements inside the iframe cannot be accessed.
+Because this test also executes a simple python script that handles voice
+recognition of the reCAPTCHA audio file, 2 libraries have to be installed
+that are specified on the github start page in the Installation chapter.
