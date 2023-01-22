@@ -21,8 +21,10 @@ Installation instructions
 The instructions are prepared for a Linux type OS.
 
 1. Install the nodejs and npm tools:
-- on Fedora/RHEL run in terminal: "$ sudo yum install nodejs"
-- on Debian/Ubuntu run in terminal: "$ sudo apt install nodejs"
+- on Fedora/RHEL run in terminal: <br>
+  `$ sudo yum install nodejs`
+- on Debian/Ubuntu run in terminal: <br>
+  `$ sudo apt install nodejs`
 
 2. From the terminal run: "$ npm install -g testcafe"
 
