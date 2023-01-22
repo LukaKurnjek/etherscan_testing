@@ -1,9 +1,12 @@
 # etherscan_testing
-Automated web tests for the etherscan.io/register website.
+Automated web tests for the [etherscan.io/register](etherscan.io/register) website.
 
 In case the website will be changed you can check the names of the webpage 
 elements with the inspector tool by opening the archived webpage that resides
 in the etherscan-register folder. 
+
+The tests are set to run on the live page [etherscan.io/register](etherscan.io/register).
+At the time of writing the code all 10 tests should pass.
 
 Runing the tests with the archived web-page will only work until the point
 when you need to check the final result of registration. So the tests will 
