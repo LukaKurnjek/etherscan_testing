@@ -1,5 +1,5 @@
 # etherscan_testing
-Automated web tests for the [etherscan.io/register](etherscan.io/register) website.
+Automated web tests for the [etherscan.io/register](etherscan.io/register) website writen with *testcafe* JavaScript library. 
 
 In case the website will be changed you can check the names of the webpage 
 elements with the inspector tool by opening the archived webpage that resides
@@ -36,7 +36,8 @@ The instructions are prepared for a Linux type OS.
 - on Debian/Ubuntu run in terminal: <br>
   `$ sudo apt install nodejs`
 
-2. From the terminal run: "$ npm install -g testcafe"
+2. Install *testcafe* library. From the terminal run:
+   `$ npm install -g testcafe`
 
 3. python 3 and pip need to be installed on the linux OS which
    is default on almost all modern OS. Additional dependencies that
