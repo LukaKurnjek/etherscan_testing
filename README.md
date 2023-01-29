@@ -16,7 +16,7 @@ Introduction
 ------------
 
 This repository contains:
-- test case instructions for the etherscan.io/register site (Testcases.pdf)
+- test case instructions for the etherscan.io/register site (folder *test-cases/Testcases.pdf*)
 - test case code that can be run with testcafe software (folder *code*)
 
 All code example should pass. For code example in folder 10, there are some
