@@ -40,13 +40,18 @@ The instructions are prepared for a Linux type OS.
    `$ npm install -g testcafe`
 
 3. Python 3 and pip (python package manager) need to be installed. Pip can be installed as:
-   For Fedora: `sudo yum install python3-pip`<br>
-   For Ubuntu: `sudo apt install python3-pip`
+- on Fedora/RHEL run in terminal:<br>
+  `sudo yum install python3-pip`
+- on Debian/Ubuntu run in terminal:<br>
+  `sudo apt install python3-pip`
    
 4. Additional dependencies that need to be installed are SpeechRecognition and ffmpeg:<br>
-   - `$ pip install SpeechRecognition`<br>
-   - For Fedora: `$ sudo yum install ffmpeg` **or** <br>
-     For Ubuntu: `$ sudo apt install ffmpeg`
+- To install SpeechRecognition run in terminal:<br>
+  `$ pip install SpeechRecognition`
+- on Fedora/RHEL run in terminal:<br>
+  `$ sudo yum install ffmpeg`
+- on Debian/Ubuntu run in terminal:<br>
+  `$ sudo apt install ffmpeg`
 
 
 Running the code examples
