@@ -36,15 +36,17 @@ The instructions are prepared for a Linux type OS.
 - on Debian/Ubuntu run in terminal: <br>
   `$ sudo apt install nodejs`
 
-2. Install *testcafe* library. From the terminal run:
+2. Install *testcafe* library. From the terminal run:<br>
    `$ npm install -g testcafe`
 
-3. python 3 and pip need to be installed on the linux OS which
-   is default on almost all modern OS. Additional dependencies that
-   need to be installed are SpeechRecognition and ffmpeg:<br>
+3. Python 3 and pip (python package manager) need to be installed. Pip can be installed as:
+   For Fedora: `sudo yum install python3-pip`<br>
+   For Ubuntu: `sudo apt install python3-pip`
+   
+4. Additional dependencies that need to be installed are SpeechRecognition and ffmpeg:<br>
    - `$ pip install SpeechRecognition`<br>
-   - `$ sudo yum install ffmpeg` **or** <br>
-     `$ sudo apt install ffmpeg`
+   - For Fedora: `$ sudo yum install ffmpeg` **or** <br>
+     For Ubuntu: `$ sudo apt install ffmpeg`
 
 
 Running the code examples
