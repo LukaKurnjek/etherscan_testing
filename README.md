@@ -49,7 +49,7 @@ The instructions are prepared for a Linux type OS.
 - To install SpeechRecognition run in terminal:<br>
   `$ pip install SpeechRecognition`
 - on Fedora/RHEL run in terminal:<br>
-  `$ sudo yum install ffmpeg`
+  `$ sudo yum install ffmpeg-free`
 - on Debian/Ubuntu run in terminal:<br>
   `$ sudo apt install ffmpeg`
 
