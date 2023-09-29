@@ -1,5 +1,4 @@
 
-
 import { Selector } from 'testcafe';
 
 // ATTENTION; Settings for this test. Needs to be set by the user! 
@@ -29,7 +28,8 @@ if (cardano_net == "preprod") {
 fixture`Processing Cardano faucet.`
     .page`https://docs.cardano.org/cardano-testnet/tools/faucet/`;
 
-// Main test. Sends funds to all addresses specified in the list. reCAPTCHA test needs to be solved only once. 
+// Main test. Sends funds only to the first addresse specified in the list. 
+// The code for looping through the list does not work because Cardano faucet restricts the usage of the faucet. 
 test('Sending funds to addresses.', async t => {
     // Defining the request funds button
     const request_button = Selector("button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary");
@@ -89,8 +89,19 @@ test('Sending funds to addresses.', async t => {
         .wait(2000) // if you are to fast google gives you another task 
         .typeText('#audio-response.rc-response-input-field.label-input-label', output)
         .click('#recaptcha-verify-button.rc-button-default.goog-inline-block')
-        .switchToMainWindow(); // switches back to main window 
+        .switchToMainWindow() // switches back to main window 
+        .wait(2000);
 
+    // This code block requests funds only for the first address
+    await t
+        // Type in the address
+        .typeText("div.MuiBox-root:nth-child(3) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)", addresses[0], { replace: true })
+
+        // Click Request funds and wait for 3 second 
+        .click(request_button)
+        .wait(3000); 
+
+    /* Will not work because you can not request more funds for different addresses from one IP in a short period of time 
     // Fills in the address and presses the Request funds button for every address from the list. 
     for (let i = 0; i < addresses.length; i++) {
         await t
@@ -99,8 +110,10 @@ test('Sending funds to addresses.', async t => {
             
             // Click Request funds and wait for 3 second 
             .click(request_button)
-            .wait(3000);
-    }
+            .wait(3000); 
+
+            // ATTENTION: Add command for requesting new funds and a timeout 
+    }*/
 }); 
 // ---------------------------------------------------------------
 
