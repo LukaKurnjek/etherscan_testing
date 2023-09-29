@@ -29,7 +29,8 @@ fixture`Processing Cardano faucet.`
     .page`https://docs.cardano.org/cardano-testnet/tools/faucet/`;
 
 // Main test. Sends funds only to the first addresse specified in the list. 
-// The code for looping through the list does not work because Cardano faucet restricts the usage of the faucet. 
+// ATTENTION: Timeouts need to be sometimes adjusted. A to small or to large timeout will cause the test to fail. 
+//            The code for looping through the list does not work because Cardano faucet restricts the usage of the faucet. 
 test('Sending funds to addresses.', async t => {
     // Defining the request funds button
     const request_button = Selector("button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary");
@@ -53,7 +54,7 @@ test('Sending funds to addresses.', async t => {
         // Switch to the recaptcha iframe element and click on the checkbox
         .switchToIframe(Selector("iframe").withAttribute("title","reCAPTCHA"))
         .click("#recaptcha-anchor.recaptcha-checkbox.goog-inline-block.recaptcha-checkbox-unchecked.rc-anchor-checkbox")
-        .wait(3000) 
+        .wait(3000) // TIMEOUT 
 
         // Switch back to main window so you can switch again to a new iframe (the raCAPTCHA pictures window)
         .switchToMainWindow() 
@@ -61,7 +62,7 @@ test('Sending funds to addresses.', async t => {
         
         // Click on the button for the audio chalange 
         .click('#recaptcha-audio-button.rc-button.goog-inline-block.rc-button-audio') 
-        .wait(3000) 
+        .wait(3000) // TIMEOUT 
         
         // Switch back to main window so you can switch again to a new iframe (the reCAPTCHA audio window)
         .switchToMainWindow() 
@@ -74,7 +75,7 @@ test('Sending funds to addresses.', async t => {
     const execSync = require('child_process').execSync;
     // It is neccessary to wrap the downloadLink into "" quotation marks because it contains an ampersand symbol
     const output = execSync('python process_mp3.py ' + '\"' + downloadLink + '\"').toString(); 
-    await t.wait(3000) 
+    await t.wait(3000) // TIMEOUT 
 
     // Log audio message and delete the MP3 and WAV files 
     console.log("Audio message says: \n" + output); 
@@ -90,7 +91,7 @@ test('Sending funds to addresses.', async t => {
         .typeText('#audio-response.rc-response-input-field.label-input-label', output)
         .click('#recaptcha-verify-button.rc-button-default.goog-inline-block')
         .switchToMainWindow() // switches back to main window 
-        .wait(2000);
+        .wait(2000); // TIMEOUT 
 
     // This code block requests funds only for the first address
     await t
