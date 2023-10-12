@@ -111,9 +111,11 @@ test('Sending funds to addresses.', async t => {
             
             // Click Request funds and wait for 3 second 
             .click(request_button)
-            .wait(3000); 
+            .wait(3000) 
 
-            // ATTENTION: Add command for requesting new funds and a timeout 
+            // Click on button for requesting new funds 
+            .click(request_button)
+            .wait(3000); 
     }*/
 }); 
 // ---------------------------------------------------------------
